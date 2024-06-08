@@ -1,0 +1,51 @@
+$beta-color-one: #fa9b72;
+$beta-color-two: #3a3a3a;
+$transition-time: .5s;
+
+.beta {
+
+  // background color default status
+  position: relative;
+  background-color: $beta-color-one;
+  color: $beta-color-two;
+
+  // background color hover status
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 0;
+    background-color: $beta-color-two;
+    transition: width $transition-time;
+  }
+
+  &-clip {
+    width: 100%;
+    background-clip: text;
+    background-image:
+            linear-gradient($beta-color-two, $beta-color-two), // col hover
+            linear-gradient($beta-color-one, $beta-color-one); // col default
+    background-repeat: no-repeat;
+    background-position: 100%, 0;
+    background-size: 100% 100%, 0 100%;
+    transition: background-size $transition-time;
+    z-index: 1;
+  }
+
+  &-title, &-desc, &-time {
+    color: transparent;
+    padding: 6px;
+  }
+
+  // animation trigger text and background
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+    .beta-clip {
+      background-size: 0 100%, 100% 100%;
+    }
+  }
+}

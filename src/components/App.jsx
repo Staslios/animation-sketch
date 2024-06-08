@@ -1,5 +1,5 @@
 import BoxImage from "./BoxImage/BoxImage.jsx";
-import BoxBlend from "./BoxBlend/BoxBlend.jsx";
+import BoxBlend from "./BoxBeta/BoxBeta.jsx";
 
 
 function App() {

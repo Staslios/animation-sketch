@@ -1,0 +1,11 @@
+.flex-col-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.flex-row-space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
