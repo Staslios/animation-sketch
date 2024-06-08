@@ -1,12 +1,12 @@
-import BoxImage from "./BoxImage/BoxImage.jsx";
-import BoxBlend from "./BoxBeta/BoxBeta.jsx";
+import BoxAlpha from "./BoxAlpha/BoxAlpha.jsx";
+import BoxBeta from "./BoxBeta/BoxBeta.jsx";
 
 
 function App() {
 
   return <>
-    <BoxImage/>
-    <BoxBlend/>
+    <BoxAlpha/>
+    <BoxBeta/>
   </>
 }
 

@@ -1,6 +1,7 @@
 $beta-color-one: #fa9b72;
 $beta-color-two: #3a3a3a;
-$transition-time: .5s;
+$beta-transition-time: .5s;
+
 
 .beta {
 
@@ -18,7 +19,7 @@ $transition-time: .5s;
     height: 100%;
     width: 0;
     background-color: $beta-color-two;
-    transition: width $transition-time;
+    transition: width $beta-transition-time;
   }
 
   &-clip {
@@ -30,13 +31,12 @@ $transition-time: .5s;
     background-repeat: no-repeat;
     background-position: 100%, 0;
     background-size: 100% 100%, 0 100%;
-    transition: background-size $transition-time;
+    transition: background-size $beta-transition-time;
     z-index: 1;
   }
 
-  &-title, &-desc, &-time {
+  .title, .desc, .time {
     color: transparent;
-    padding: 6px;
   }
 
   // animation trigger text and background

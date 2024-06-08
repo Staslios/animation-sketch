@@ -1,0 +1,39 @@
+$alpha-color-one: #2047cc;
+$alpha-color-two: #fff;
+$alpha-transition-time: .5s;
+
+
+.alpha {
+
+  background-image:
+          linear-gradient($alpha-color-one, $alpha-color-one), // bg color default
+          linear-gradient($alpha-color-two, $alpha-color-two); // bg color hover
+  background-repeat: no-repeat;
+  background-position: 100%, 0;
+  background-size: 100% 100%, 100% 100%;
+  transition: background-size $alpha-transition-time;
+
+  .time, .title, .desc {
+    color: transparent;
+    background-clip: text;
+    background-image:
+            linear-gradient($alpha-color-one, $alpha-color-one), // text color hover
+            linear-gradient($alpha-color-two, $alpha-color-two); // text color default
+    background-repeat: no-repeat;
+    background-position: 0, 100%;
+    background-size: 0 100%, 100% 100%;
+    transition: background-size $alpha-transition-time;
+
+    &:hover {
+      background-size: 100% 100%, 0 100%;
+    }
+  }
+
+  // animation trigger
+  &:hover {
+    .time, .title, .desc {
+      background-size: 100% 100%, 0 100%;
+    }
+    background-size: 0 100%, 100% 100%;
+  }
+}
