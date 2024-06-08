@@ -1,0 +1,56 @@
+$color-one: #2047cc;
+$color-two: #fff;
+
+.item {
+  margin: 20px 0;
+  background-image:
+          linear-gradient($color-one, $color-one),
+          linear-gradient($color-two, $color-two);
+  background-repeat: no-repeat;
+  background-position: 100%, 0;
+  background-size: 100% 100%, 100% 100%;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px;
+  transition: background-size .5s;
+
+  &:hover {
+    .time, .desc-major, .desc-minor {
+      background-size: 100% 100%, 0 100%;
+    }
+    background-size: 0 100%, 100% 100%;
+  }
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+
+  &-major {
+    font-size: 12px;
+  }
+
+  &-minor {
+    font-size: 10px;
+  }
+}
+
+.time, .desc-major, .desc-minor {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px;
+
+  color: transparent;
+  background-clip: text;
+  background-image:
+          linear-gradient($color-one, $color-one),
+          linear-gradient($color-two, $color-two);
+  background-repeat: no-repeat;
+  background-position: 0, 100%;
+  background-size: 0 100%, 100% 100%;
+  transition: background-size .5s;
+
+  &:hover {
+    background-size: 100% 100%, 0 100%;
+  }
+}
