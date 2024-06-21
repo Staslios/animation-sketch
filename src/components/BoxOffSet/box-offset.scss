@@ -1,6 +1,6 @@
 $height: 60px;
 $width: 300px;
-$border: 4px;
+$border: 3px;
 $color: #f32727;
 
 .box-off-set {
@@ -16,7 +16,7 @@ $color: #f32727;
   transition: outline-offset .2s, outline-color .2s;
 
   &:hover {
-    outline-offset: 2px;
+    outline-offset: 4px;
     outline: $color solid $border;
   }
 }
