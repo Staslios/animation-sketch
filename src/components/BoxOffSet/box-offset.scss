@@ -1,0 +1,22 @@
+$height: 60px;
+$width: 300px;
+$border: 4px;
+$color: #f32727;
+
+.box-off-set {
+  margin: 20px;
+  padding: 5px;
+  border: $border solid $color;
+  height: $height;
+  width: $width;
+  text-align: center;
+  line-height: $height;
+  outline-offset: 14px;
+  outline: transparent solid $border;
+  transition: outline-offset .2s, outline-color .2s;
+
+  &:hover {
+    outline-offset: 2px;
+    outline: $color solid $border;
+  }
+}
