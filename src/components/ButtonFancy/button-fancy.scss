@@ -1,0 +1,33 @@
+$text-color: white;
+$blink-color: rgba(255,255,255, .6);
+$bg-color: rgba(255,148,0,1);
+$shadow-color: rgba(18, 2, 2, 0.33);
+$rotate-Y: 25deg;
+
+.fancy {
+  margin-left: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: linear-gradient(70deg,
+          $bg-color 20%,
+          $blink-color 50%,
+          $bg-color 70%) no-repeat -200px, $bg-color;
+  color: transparent;
+  padding: 12px 26px;
+  text-shadow: 0 0 $text-color, 8px 0 2px $shadow-color;
+  transition: transform .2s, box-shadow .2s, text-shadow .2s, background .2s;
+  transform: perspective(500px) rotateY(-25deg);
+  box-shadow: 4px 2px 6px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    transform: perspective(500px) rotateY(25deg);
+    box-shadow: -4px 2px 6px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 0 $text-color, -8px 0 2px $shadow-color;
+    background: linear-gradient(70deg,
+            $bg-color 20%,
+            $blink-color 50%,
+            $bg-color 70%) no-repeat 200px, $bg-color;
+  }
+}
